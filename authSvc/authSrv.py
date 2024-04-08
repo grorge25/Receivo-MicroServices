@@ -1,30 +1,27 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, session
 from flask_cors import CORS
+from CRUD import *
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_secret_key'
+app.config['SESSION_TYPE'] = 'filesystem'
 CORS(app)
 
-@app.route('/login', methods=['POST', "OPTIONS"])
+dbOp = Database(DB_PATH)
+
+@app.route('/login', methods=['POST'])
 def login():
-    if request.method == 'OPTIONS':
-        # Handle CORS preflight request
-        response = jsonify({'success': True})
-        response.headers.add('Access-Control-Allow-Origin', '*')
-        response.headers.add('Access-Control-Allow-Headers', 'Content-Type')
-        response.headers.add('Access-Control-Allow-Methods', 'POST')
-        return response
-    # Get the username and password from the request body
+    
     data = request.get_json()
     username = data.get('username')
     password = data.get('password')
+    
+    db_response = dbOp.fct_verify_user(username, password)
 
-    # Perform authentication (replace this with your actual authentication logic)
-    if username == 'admin' and password == 'admin':
-        print(data)
-        # Return a success message and user information
+    if db_response == 200:
+        session["user"] = username
         return jsonify({'success': True, 'message': 'Login successful', 'username': username}), 200
     else:
-        # Return an error message if authentication fails
         return jsonify({'success': False, 'message': 'Invalid username or password'}), 401
 
 
