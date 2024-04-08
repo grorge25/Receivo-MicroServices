@@ -1,0 +1,19 @@
+.links {
+    width: 30%;
+    display: flex;
+    margin-left: 68%;
+    justify-content: space-between;
+    font-size: 20px;
+    /* border-bottom: 1px solid #666; */
+}
+
+.links a {
+    text-decoration: none;
+    padding: 20px;
+    color: #e9d9c5;
+
+}
+
+.links a:hover {
+    color: #fdfdfd;
+}
