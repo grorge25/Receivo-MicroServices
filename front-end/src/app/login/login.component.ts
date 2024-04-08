@@ -21,16 +21,16 @@ export class LoginComponent {
 
           if (response.status === undefined) {
             console.log('Login successful:', response.body);
-            // Redirect to main page after successful login
-            this.router.navigate(['/signin']); // Replace 'main' with your main page route
+
+            this.router.navigate(['/main']);
           } else if (response.status === 401) {
             console.log('Invalid username or password');
-            // Display error message to user
+
           }
         },
         error => {
           console.error('Login error:', error);
-          // Display error message to user
+
         }
       );
   }
