@@ -1,0 +1,38 @@
+.links {
+    width: 30%;
+    display: flex;
+    margin-left: 68%;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    padding: 20px;
+    color: #666;
+}
+
+.links a:hover {
+    color: #fdfdfd;
+}
+
+.banner {
+    width: 100%;
+    /* border-bottom: 1px solid #666; */
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.middle h1 {
+    font-size: 50px;
+}
+
+.middle p {
+    margin-left: 50px;
+    text-align: justify;
+}
