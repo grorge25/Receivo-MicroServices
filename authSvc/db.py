@@ -1,8 +1,15 @@
-import sqlite3
+from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
-db = r"D:\Programming\Python\Receivo MicroServices\authSvc\db\authSvc.db"
+MONGO_URL = os.getenv("MONGO_DB_URL")
+cluster = MongoClient(MONGO_URL) 
+db = cluster["authSvc"]
+collection = db["test"]
 
-con = sqlite3.connect(db)
-cur = con.cursor()
-cur.execute("DROP TABLE preturi")
-con.commit()
+print(collection.find_one( {"name":"aurel"} ))
+# collection.insert_one({
+#     "name" : "aurel",
+#     "users_allowed" : ['1', '2', '3']
+# })

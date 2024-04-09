@@ -7,7 +7,7 @@ app.config['SECRET_KEY'] = 'your_secret_key'
 app.config['SESSION_TYPE'] = 'filesystem'
 CORS(app)
 
-dbOp = Database(DB_PATH)
+dbOp = Database()
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -16,10 +16,12 @@ def login():
     password = data.get('password')
     
     db_response = dbOp.fct_verify_user(username, password)
+    has_init = db_response[0]
+    response = db_response[1]
 
-    if db_response == 200:
+    if response == 200:
         session["user"] = username
-        return jsonify({'success': True, 'message': 'Login successful', 'username': username}), 200
+        return jsonify({'success': True, 'message': 'Login successful', 'username': username, 'has initiate':has_init}), 200
     else:
         return jsonify({'success': False, 'message': 'Invalid username or password'}), 401
 

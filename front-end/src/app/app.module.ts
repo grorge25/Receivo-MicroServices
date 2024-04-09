@@ -11,6 +11,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { InitializeOrganizationComponent } from './initialize-organization/initialize-organization.component';
+import { InitOrgComponent } from './init-org/init-org.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     HomePageComponent,
     AboutUsComponent,
     ContactComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    InitializeOrganizationComponent,
+    InitOrgComponent
   ],
   imports: [
     BrowserModule,

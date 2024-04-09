@@ -52,4 +52,6 @@ export class SignInComponent {
     return this.password.length >= 12 && /[A-Z]/.test(this.password) && /[!@#$%^&*()\-_=+{};:,<.>]/.test(this.password);
   }
 
+
+
 }
