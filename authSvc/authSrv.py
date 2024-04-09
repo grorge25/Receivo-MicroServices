@@ -11,7 +11,6 @@ dbOp = Database(DB_PATH)
 
 @app.route('/login', methods=['POST'])
 def login():
-    
     data = request.get_json()
     username = data.get('username')
     password = data.get('password')
@@ -24,6 +23,23 @@ def login():
     else:
         return jsonify({'success': False, 'message': 'Invalid username or password'}), 401
 
+
+@app.route('/register', methods = ["POST"])
+def register():
+    data = request.get_json()
+    username = data.get("username")
+    password = data.get("password")
+    email = data.get("email")
+    
+    db_response = dbOp.mtd_add_user(username, password, email)
+    
+    if  db_response == 200:
+        session["user"] = username
+        return jsonify({"status": "User created successfully"}), 200
+    else:
+        return jsonify({"error":"Username already exists!"}), 503
+    
+    
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)

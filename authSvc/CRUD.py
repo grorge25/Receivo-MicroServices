@@ -1,7 +1,7 @@
 import hashlib
 import sqlite3
 
-DB_PATH = r"db\produse.db"
+DB_PATH = r"D:\Programming\Python\Receivo MicroServices\authSvc\db\authSvc.db"
 
 def fct_hash_str(string):
     sha256_hash = hashlib.sha256()
@@ -21,7 +21,7 @@ class Database:
     def close(self):
         self.con.close()
         
-        
+    # verify if the credentials are correct
     def fct_verify_user(self, user, pwd):
         self.connect()  # Connect to the databas
         self.cur.execute("SELECT password FROM userinfo WHERE username = ?", (user,))
@@ -38,10 +38,33 @@ class Database:
         
         self.close()  # Close the database connection
         return status
+    
+    
+    # Add the user to the DB if the credetials are valid
+    def mtd_add_user(self, user, pwd, email):
+        self.connect()
+        self.cur.execute("SELECT  * FROM userinfo WHERE username = ?", (user, ))  
+        result_username = self.cur.fetchone()
+        
+        self.cur.execute("SELECT  * FROM userinfo WHERE email = ?", (email, ))  
+        result_email = self.cur.fetchone()
+        
+        if result_username is None and result_email is None:
+            query = "INSERT INTO userinfo (username, password, email) VALUES(?, ?, ?)"
+            params = (user, fct_hash_str(pwd), email, )
+            self.cur.execute(query, params)
+            self.con.commit()
+            status = 200 # Succes
+        else:
+            status = 503 # Conflict
+        
+        self.close()
+        return status
+        
         
         
         
 if __name__ == "__main__":
-    db_name = "your_database_name.db" 
-    dbOp = Database(db_name)
+    dbOp = Database()
     print(dbOp.fct_verify_user("test5", "1"))
+    dbOp.mtd_add_user("test6", "1", "a@a")
