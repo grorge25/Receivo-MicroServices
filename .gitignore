@@ -605,3 +605,5 @@ Thumbs.db
 
 productSvc/productSvc
 .env
+
+/venvPy

@@ -38,11 +38,8 @@ class Database:
             if hashed_pwd == res ["password"]:
                 status = 200  # Passwords match
             else:
-                status = 401
-        try:
-            return res["hadInitialized"], status
-        except KeyError:
-            return status
+                status = 401 # Invalid password
+        return status
     
     
     def mtd_add_user(self, user, pwd, email): # Add the user to the DB if the credetials are valid
