@@ -12,6 +12,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { InitOrgComponent } from './init-org/init-org.component';
+import { Test123Component } from './test-123/test-123.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { InitOrgComponent } from './init-org/init-org.component';
     AboutUsComponent,
     ContactComponent,
     ResetPasswordComponent,
-    InitOrgComponent
+    InitOrgComponent,
+    Test123Component
   ],
   imports: [
     BrowserModule,

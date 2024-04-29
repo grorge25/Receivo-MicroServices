@@ -8,7 +8,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { InitOrgComponent } from './init-org/init-org.component';
-
+import { Test123Component } from './test-123/test-123.component';
 
 
 
@@ -22,6 +22,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'resetpwd', component: ResetPasswordComponent },
   { path: 'initorg', component: InitOrgComponent },
+  { path: 'test-123', component: Test123Component},
+
 ];
 
 @NgModule({
