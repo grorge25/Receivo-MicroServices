@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 * {
-    background-color: #000;
+    margin: 0px;
     font-family: 'poppins', sans-serif;
     color: #fdfdfd;
-    border-radius: 10px;
+}
+body{ 
+    background-color: black;
 }
