@@ -411,7 +411,7 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+
 downloads/
 eggs/
 .eggs/
@@ -606,4 +606,5 @@ Thumbs.db
 productSvc/productSvc
 .env
 
-/venvPy
+/venvPy 
+
