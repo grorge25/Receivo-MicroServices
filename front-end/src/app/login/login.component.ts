@@ -14,7 +14,7 @@ export class LoginComponent {
   constructor(private http: HttpClient, private router: Router) { }
 
   onSubmit() {
-    this.http.post<any>('http://192.168.1.193:5000/login', { username: this.username, password: this.password })
+    this.http.post<any>('https://authsvc.pythonanywhere.com/login', { username: this.username, password: this.password })
       .subscribe(
         response => {
           console.log(response.status);
