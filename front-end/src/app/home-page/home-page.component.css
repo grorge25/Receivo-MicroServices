@@ -73,8 +73,8 @@ h1{
 }
 
 .middle .container h1 {
-    font-size: 39px; /* Mărimea dorită pentru h1 */
-    margin-bottom: 22px; /* Spațiu între h1 și p */
+    font-size: 39px; 
+    margin-bottom: 22px; 
 }
 .middle .container p{
     font-size: 18px;
@@ -88,6 +88,9 @@ h1{
 .about-us {
     background-color: #383737;
     padding: 50px 0;
+}
+.about-us .about-text h2{
+  text-align: center;
 }
 
 .about-us .container {
