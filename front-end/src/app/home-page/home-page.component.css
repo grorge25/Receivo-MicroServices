@@ -1,7 +1,6 @@
 .links {
     width: 30%;
     display: flex;
-    margin-left: 68%;
     justify-content: space-between;
     font-size: 20px;
 }
