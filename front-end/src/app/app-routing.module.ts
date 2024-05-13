@@ -9,6 +9,10 @@ import { ContactComponent } from './contact/contact.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { InitOrgComponent } from './init-org/init-org.component';
 import { Test123Component } from './test-123/test-123.component';
+import { CompanyComponent } from './company/company.component';
+import { RecNotesComponent } from './rec-notes/rec-notes.component';
+import { MembersComponent } from './members/members.component';
+import { SettingsComponent } from './settings/settings.component';
 
 
 
@@ -23,6 +27,11 @@ const routes: Routes = [
   { path: 'resetpwd', component: ResetPasswordComponent },
   { path: 'initorg', component: InitOrgComponent },
   { path: 'test-123', component: Test123Component},
+  { path: 'company', component: CompanyComponent},
+  { path: 'recnotes', component: RecNotesComponent},
+  { path: 'members', component: MembersComponent},
+  { path: 'settings', component: SettingsComponent},
+
 
 ];
 

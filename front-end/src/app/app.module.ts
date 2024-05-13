@@ -13,6 +13,10 @@ import { ContactComponent } from './contact/contact.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { InitOrgComponent } from './init-org/init-org.component';
 import { Test123Component } from './test-123/test-123.component';
+import { CompanyComponent } from './company/company.component';
+import { RecNotesComponent } from './rec-notes/rec-notes.component';
+import { MembersComponent } from './members/members.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { Test123Component } from './test-123/test-123.component';
     ContactComponent,
     ResetPasswordComponent,
     InitOrgComponent,
-    Test123Component
+    Test123Component,
+    CompanyComponent,
+    RecNotesComponent,
+    MembersComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
