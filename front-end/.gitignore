@@ -594,7 +594,7 @@ yarn-error.log
 
 # Miscellaneous
 .angular/
-.angular/
+/.angular
 .sass-cache/
 /connect.lock
 /coverage

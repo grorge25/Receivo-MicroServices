@@ -17,6 +17,7 @@ import { CompanyComponent } from './company/company.component';
 import { RecNotesComponent } from './rec-notes/rec-notes.component';
 import { MembersComponent } from './members/members.component';
 import { SettingsComponent } from './settings/settings.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SettingsComponent } from './settings/settings.component';
     CompanyComponent,
     RecNotesComponent,
     MembersComponent,
-    SettingsComponent
+    SettingsComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

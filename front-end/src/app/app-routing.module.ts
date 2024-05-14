@@ -13,6 +13,7 @@ import { CompanyComponent } from './company/company.component';
 import { RecNotesComponent } from './rec-notes/rec-notes.component';
 import { MembersComponent } from './members/members.component';
 import { SettingsComponent } from './settings/settings.component';
+import { ProductsComponent } from './products/products.component';
 
 
 
@@ -31,6 +32,8 @@ const routes: Routes = [
   { path: 'recnotes', component: RecNotesComponent},
   { path: 'members', component: MembersComponent},
   { path: 'settings', component: SettingsComponent},
+  { path: 'products', component: ProductsComponent},
+
 
 
 ];
