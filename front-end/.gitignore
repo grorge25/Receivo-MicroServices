@@ -593,7 +593,7 @@ yarn-error.log
 
 
 # Miscellaneous
-.angular/
+.angular/cache/17.3.3/front-end
 /.angular
 .sass-cache/
 /connect.lock
