@@ -12,12 +12,12 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { InitOrgComponent } from './init-org/init-org.component';
-import { Test123Component } from './test-123/test-123.component';
 import { CompanyComponent } from './company/company.component';
 import { RecNotesComponent } from './rec-notes/rec-notes.component';
 import { MembersComponent } from './members/members.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ProductsComponent } from './products/products.component';
+
 
 @NgModule({
   declarations: [
@@ -30,12 +30,11 @@ import { ProductsComponent } from './products/products.component';
     ContactComponent,
     ResetPasswordComponent,
     InitOrgComponent,
-    Test123Component,
     CompanyComponent,
     RecNotesComponent,
     MembersComponent,
     SettingsComponent,
-    ProductsComponent
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
