@@ -71,6 +71,50 @@ h1{
     text-align: center;
     max-width: 800px; 
 }
+.button {
+    text-align: center;
+}
+
+.arrow-button {
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    border: 2px solid white; /* Adăugăm un contur */
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.arrow-button:hover::before {
+    transform: translateX(50px); /* Deplasare la hover */
+}
+
+.arrow-button::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top: 2px solid white; /* Forma de săgeată */
+    border-right: 2px solid white; /* Forma de săgeată */
+    transform: rotate(45deg);
+    transition: transform 0.3s ease; /* Tranziție pentru deplasare */
+    top: 50%;
+    right: 20px;
+    margin-top: -10px;
+}
+
+.arrow-button:active::before {
+    transform: translateX(50px); /* Deplasare la apăsare */
+}
+
+.arrow-button a {
+    color: inherit;
+    text-decoration: none;
+}
+
 
 .middle .container h1 {
     font-size: 39px; 
@@ -113,6 +157,9 @@ h1{
     max-width: 100%;
     height: auto;
 }
+
+
+
 footer {
     background-color: #333;
     color: #fff;
