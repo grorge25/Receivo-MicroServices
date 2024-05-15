@@ -81,14 +81,14 @@ h1{
     background-color: transparent;
     color: white;
     font-size: 20px;
-    border: 2px solid white; /* Adăugăm un contur */
+    border: 2px solid white; 
     position: relative;
     cursor: pointer;
     overflow: hidden;
 }
 
 .arrow-button:hover::before {
-    transform: translateX(50px); /* Deplasare la hover */
+    transform: translateX(50px);
 }
 
 .arrow-button::before {
@@ -97,17 +97,16 @@ h1{
     width: 20px;
     height: 20px;
     background-color: transparent;
-    border-top: 2px solid white; /* Forma de săgeată */
-    border-right: 2px solid white; /* Forma de săgeată */
+    border-top: 2px solid white; 
+    border-right: 2px solid white; 
     transform: rotate(45deg);
-    transition: transform 0.3s ease; /* Tranziție pentru deplasare */
-    top: 50%;
+    transition: transform 0.3s ease; 
     right: 20px;
     margin-top: -10px;
 }
 
 .arrow-button:active::before {
-    transform: translateX(50px); /* Deplasare la apăsare */
+    transform: translateX(50px);
 }
 
 .arrow-button a {
