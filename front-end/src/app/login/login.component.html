@@ -1,25 +1,30 @@
 <div class="container">
+    <div class="form-container">
+             
+         <form (ngSubmit)="onSubmit()">
 
-    <form (ngSubmit)="onSubmit()">
+            <div class="input">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" [(ngModel)]="username" required>
+            </div>
 
-        <div class="input">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" [(ngModel)]="username" required>
-        </div>
+            <div class="input">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" [(ngModel)]="password" required>
+            </div>
 
-        <div class="input">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" [(ngModel)]="password" required>
-        </div>
+            <div class="aditionalInfo">
+                <p>Don't have an account? <a href="/signin">Sign Up!</a></p>
+                <p>Forgot password? <a href="/resetpwd">Reset it.</a></p>
+            </div>
+            <div class="input">
+                <label for="remember">Remember me</label>
+                <input type="checkbox" id="remember" name="remember" [(ngModel)]="rememberMe">
+            </div>
 
-        <div class="aditionalInfo">
-            <p>Don't have an account? <a href="/signin">Sign Up!</a></p>
-            <p>Forgot password? <a href="/resetpwd">Reset it.</a></p>
-        </div>
-
-        <div class="submit_button">
-            <button type="submit">Login</button>
-        </div>
-    </form>
-
+            <div class="button">
+                <button class="arrow-button"><a href="login">Login --<span class="arrow-shape"></span></a></button>
+            </div>
+        </form>
+    </div>
 </div>

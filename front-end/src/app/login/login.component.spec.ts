@@ -20,4 +20,8 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should have a rememberMe property initialized as false', () => {
+    expect(component.rememberMe).toBeFalse();
+  });
+
 });

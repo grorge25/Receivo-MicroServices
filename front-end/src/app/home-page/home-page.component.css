@@ -12,11 +12,18 @@ h1{
     z-index: 1000;
 }  
 
+.navbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}  
+
 .navbar .container{
     padding: 1rem 4%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
     background-color: black;
 }
