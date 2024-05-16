@@ -11,6 +11,7 @@ export class LoginComponent {
   rememberMe: boolean = false;
   username: string | undefined;
   password: string | undefined;
+  errorMessage: string | undefined;
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -30,6 +31,7 @@ export class LoginComponent {
           this.router.navigate(['/main']);
         } else if (response.status === 401) {
           console.log('Invalid username or password');
+          this.errorMessage = 'Invalid username or password';
         }
       },
       error => {
