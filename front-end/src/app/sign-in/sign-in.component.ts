@@ -16,7 +16,7 @@ export class SignInComponent {
   constructor(private http: HttpClient, private router: Router) { }
 
   onSubmit() {
-    this.http.post<any>('http://192.168.1.193:5000/register', { username: this.username, password: this.password, email: this.email })
+    this.http.post<any>('https://authsvc.pythonanywhere.com/register', { username: this.username, password: this.password, email: this.email })
       .subscribe(
         response => {
           console.log(response.status);

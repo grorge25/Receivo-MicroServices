@@ -28,9 +28,8 @@ export class LoginComponent {
         
         if (response.status === 'success') {
           this.router.navigate(['/main']);
-        } else {
-       
-          this.loginError = true;
+        } else if (response.status === 401) {
+          console.log('Invalid username or password');
         }
       },
       error => {
