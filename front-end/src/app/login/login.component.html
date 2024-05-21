@@ -21,10 +21,13 @@
                 <label for="remember">Remember me</label>
                 <input type="checkbox" id="remember" name="remember" [(ngModel)]="rememberMe">
             </div>
-
+           
             <div class="button">
-                <button class="arrow-button"><a href="login">Login --<span class="arrow-shape"></span></a></button>
+                <button class="arrow-button"><a href="login">Login<span class="arrow-shape"></span></a></button>
             </div>
+          
         </form>
+        <div class="error" *ngIf="loginError">Incorect username or password!</div>
+        
     </div>
 </div>

@@ -11,6 +11,7 @@ export class LoginComponent {
   rememberMe: boolean = false;
   username: string | undefined;
   password: string | undefined;
+  loginError: boolean = false;
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -18,23 +19,27 @@ export class LoginComponent {
     this.http.post<any>('https://authsvc.pythonanywhere.com/login', { 
       username: this.username, 
       password: this.password, 
-      rememberMe: this.rememberMe // Include rememberMe in the POST data
+      rememberMe: this.rememberMe 
     })
     .subscribe(
       response => {
         console.log(response.status);
 
-        if (response.status === undefined) {
-          console.log('Login successful:', response.body);
-
+        
+        if (response.status === 'success') {
           this.router.navigate(['/main']);
-        } else if (response.status === 401) {
-          console.log('Invalid username or password');
+        } else {
+       
+          this.loginError = true;
         }
       },
       error => {
         console.error('Login error:', error);
+        
+        this.loginError = true;
       }
     );
   }
 }
+
+
