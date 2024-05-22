@@ -12,6 +12,7 @@ export class LoginComponent {
   username: string | undefined;
   password: string | undefined;
   loginError: boolean = false;
+  errorMessage: string | null = null; 
 
   constructor(private http: HttpClient, private router: Router) { }
 

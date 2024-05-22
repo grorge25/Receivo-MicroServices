@@ -3,8 +3,9 @@
              
          <form (ngSubmit)="onSubmit()">
             <div *ngIf="errorMessage" class="error-message">
-                <p style="background-color: aliceblue;">{{ errorMessage }}</p> 
+                <p style="background-color: aliceblue;">{{ errorMessage }}</p>
             </div>
+            
               
             <div class="input">
                 <label for="username">Username</label>
